@@ -3,25 +3,474 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Sad Data Records</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{background:#111;color:#f5f5f5;font-family:'Oswald',sans-serif;line-height:1.6}a{text-decoration:none}img{display:block}
-header{width:100%}.logo-banner{background:#fff;text-align:center;padding:55px 20px 45px;border-bottom:4px solid #111}.logo{width:90%;max-width:650px;margin:auto}.main-nav{background:#111;text-align:center;padding:18px 0;border-bottom:1px solid #333}.main-nav a{color:#fff;margin:0 18px;text-transform:uppercase;letter-spacing:2px;font-weight:700;transition:.25s}.main-nav a:hover{color:#888}
-section{max-width:1200px;margin:auto;padding:70px 20px}.section-title{font-size:2.5rem;margin-bottom:35px;border-bottom:2px solid #444;display:inline-block}
-.hero{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.hero img{width:100%;border:4px solid #fff}.hero h4{color:#ff6666;letter-spacing:3px}.hero h1{font-size:4rem;margin:8px 0}.button{display:inline-block;margin-top:25px;padding:12px 24px;background:#fff;color:#111;font-weight:bold}.button:hover{background:#ddd}
-.roster{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}.roster div,.release,.merch-box{background:#1b1b1b;border:1px solid #333}.roster div{padding:18px}.releases{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}.release{padding:15px}.release img{width:100%}.listen,.coming{display:inline-block;margin-top:15px;padding:10px 18px}.listen{background:#fff;color:#111;font-weight:bold}.coming{border:1px solid #777}.merch{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}.merch-box{padding:20px}.merch-box a{display:block;color:#ddd;margin:8px 0}.merch-box a:hover{color:#fff}footer{text-align:center;padding:50px;border-top:2px solid #333;color:#777}
-@media(max-width:900px){.hero{grid-template-columns:1fr}.hero h1{font-size:2.6rem}.main-nav a{display:inline-block;margin:8px 10px}}
-</style></head><body>
-<header><div class="logo-banner"><img src="images/logo.svg" class="logo" alt="Sad Data Records"></div><nav class="main-nav"><a href="#roster">Roster</a><a href="#releases">Releases</a><a href="#merch">Merch</a></nav></header>
-<section><div class="hero"><img src="images/midlife.jpg"><div><h4>NEWEST RELEASE</h4><h1>MIDLIFE</h1><h2>The Vase in Late Spring</h2><p>The newest release from Sad Data Records.</p><a class="button" href="https://ffm.to/thevaseinlatespring-midlife" target="_blank" rel="noopener">LISTEN NOW</a></div></div></section>
-<section style="display:none"></section>
-<section id="roster" style="display:none"></section>
-<section id="releases"><h2 class="section-title">RELEASES</h2><div class="releases">
-<div class="release"><img src="images/midlife.jpg"><h3>Midlife</h3><p>The Vase in Late Spring</p><a class="listen" href="https://ffm.to/thevaseinlatespring-midlife" target="_blank">Listen</a></div>
-<div class="release"><img src="images/demos.jpg"><h3>Demos</h3><p>The Vase in Late Spring</p><a class="listen" href="https://ffm.to/thevaseinlatespring-demos" target="_blank">Listen</a></div>
-<div class="release"><img src="images/asteroideyes.jpg"><h3>Self-Titled</h3><p>Asteroid Eyes</p><a class="listen" href="https://ffm.to/asteroideyes-self-titled" target="_blank">Listen</a></div>
-<div class="release"><h3>COMING SOON</h3><p>Lee Allen Johnson</p></div><div class="release"><h3>COMING SOON</h3><p>Basement Howl</p></div><div class="release"><h3>COMING SOON</h3><p>The Sound of Nothing Working</p></div>
-</div></section>
-<section id="merch"><h2 class="section-title">MERCH</h2><div class="merch"><div class="merch-box"><h3>REPRESENT IT</h3><a target="_blank" href="https://www.teepublic.com/user/sad-data-records/stickers">Stickers</a><a target="_blank" href="https://www.teepublic.com/user/sad-data-records/magnets">Magnets</a><a target="_blank" href="https://www.teepublic.com/user/sad-data-records/mug">Mugs</a><a target="_blank" href="https://www.teepublic.com/user/sad-data-records/throw-pillows">Throw Pillows</a></div></div></section>
-<footer>© 2026 SAD DATA RECORDS</footer></body></html>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#111;
+    color:#f5f5f5;
+    font-family:'Oswald',sans-serif;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    display:block;
+}
+
+/* HEADER */
+
+header{
+    background:#fff;
+    text-align:center;
+    padding:55px 20px 45px;
+    border-bottom:4px solid #111;
+}
+
+.logo{
+    width:90%;
+    max-width:650px;
+    margin:auto;
+}
+
+nav{
+    margin-top:35px;
+}
+
+nav a{
+    color:#111;
+    margin:0 18px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-weight:700;
+    transition:.25s;
+}
+
+nav a:hover{
+    color:#777;
+}
+
+/* GENERAL */
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.section-title{
+    font-size:2.5rem;
+    margin-bottom:35px;
+    border-bottom:2px solid #444;
+    display:inline-block;
+}
+
+/* HERO */
+
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.hero img{
+    width:100%;
+    border:4px solid #fff;
+}
+
+.hero h4{
+    color:#ff6666;
+    letter-spacing:3px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin:8px 0;
+}
+
+.button{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 24px;
+    background:#fff;
+    color:#111;
+    font-weight:bold;
+    transition:.25s;
+}
+
+.button:hover{
+    background:#ddd;
+}
+
+/* ROSTER */
+
+.roster{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.roster div{
+    background:#1b1b1b;
+    padding:18px;
+    border:1px solid #333;
+}
+
+/* RELEASES */
+
+.releases{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.release{
+    background:#1b1b1b;
+    border:1px solid #333;
+    padding:15px;
+    transition:.25s;
+}
+
+.release:hover{
+    border-color:#777;
+}
+
+.release img{
+    width:100%;
+}
+
+.release h3{
+    margin-top:12px;
+}
+
+.listen{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 18px;
+    background:#fff;
+    color:#111;
+    font-weight:bold;
+}
+
+.coming{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 18px;
+    border:1px solid #777;
+}
+
+/* MERCH */
+
+.merch{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.merch-box{
+    background:#1b1b1b;
+    border:1px solid #333;
+    padding:20px;
+}
+
+.merch-box h3{
+    margin-bottom:12px;
+}
+
+.merch-box a{
+    display:block;
+    color:#ddd;
+    margin:8px 0;
+}
+
+.merch-box a:hover{
+    color:#fff;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:50px;
+    border-top:2px solid #333;
+    color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+    grid-template-columns:1fr;
+}
+
+.hero h1{
+    font-size:2.6rem;
+}
+
+nav a{
+    display:inline-block;
+    margin:8px 10px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="images/logo.svg" class="logo" alt="Sad Data Records">
+
+<nav>
+<a href="#roster">Roster</a>
+<a href="#releases">Releases</a>
+<a href="#merch">Merch</a>
+</nav>
+
+</header>
+
+<section>
+
+<div class="hero">
+
+<img src="images/midlife.jpg" alt="Midlife Album Cover">
+
+<div>
+
+<h4>NEWEST RELEASE</h4>
+
+<h1>MIDLIFE</h1>
+
+<h2>The Vase in Late Spring</h2>
+
+<p>
+The newest release from Sad Data Records.
+</p>
+
+<a class="button"
+href="https://ffm.to/thevaseinlatespring-midlife"
+target="_blank"
+rel="noopener">
+LISTEN NOW
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- UP NEXT SECTION (HIDDEN FOR NOW - KEEP FOR FUTURE USE) -->
+
+<section style="display:none;">
+
+<h2 class="section-title">UP NEXT</h2>
+
+<div class="hero">
+
+<img src="images/leeallenjohnson.jpg" alt="Lee Allen Johnson Album">
+
+<div>
+
+<h1 style="font-size:2.5rem;">
+WE WERE ALREADY GONE BEFORE WE LEFT
+</h1>
+
+<h2>Lee Allen Johnson</h2>
+
+<p>
+Coming September 1, 2026.
+</p>
+
+<div class="coming">
+SEPTEMBER 1, 2026
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="roster" style="display:none;">
+
+<h2 class="section-title">ARTIST ROSTER</h2>
+
+<div class="roster">
+
+<div>The Vase in Late Spring</div>
+<div>Asteroid Eyes</div>
+<div>Lee Allen Johnson</div>
+<div>Basement Howl</div>
+<div>The Sound of Nothing Working</div>
+
+</div>
+
+</section>
+
+<section id="releases">
+
+<h2 class="section-title">RELEASES</h2>
+
+<div class="releases">
+
+<div class="release">
+
+<img src="images/midlife.jpg" alt="Midlife">
+
+<h3>Midlife</h3>
+
+<p>The Vase in Late Spring</p>
+
+<a class="listen"
+href="https://ffm.to/thevaseinlatespring-midlife"
+target="_blank"
+rel="noopener">
+Listen
+</a>
+
+</div>
+
+<div class="release">
+
+<img src="images/demos.jpg" alt="Demos">
+
+<h3>Demos</h3>
+
+<p>The Vase in Late Spring</p>
+
+<a class="listen"
+href="https://ffm.to/thevaseinlatespring-demos"
+target="_blank"
+rel="noopener">
+Listen
+</a>
+
+</div>
+
+<div class="release">
+
+<img src="images/asteroideyes.jpg" alt="Asteroid Eyes">
+
+<h3>Self-Titled</h3>
+
+<p>Asteroid Eyes</p>
+
+<a class="listen"
+href="https://ffm.to/asteroideyes-self-titled"
+target="_blank"
+rel="noopener">
+Listen
+</a>
+
+</div>
+
+<div class="release">
+
+<h3>COMING SOON</h3>
+
+<p>Lee Allen Johnson</p>
+
+</div>
+
+<div class="release">
+
+<h3>COMING SOON</h3>
+
+<p>Basement Howl</p>
+
+</div>
+
+<div class="release">
+
+<h3>COMING SOON</h3>
+
+<p>The Sound of Nothing Working</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="merch">
+
+<h2 class="section-title">MERCH</h2>
+
+<div class="merch">
+
+<div class="merch-box">
+
+<h3>REPRESENT IT</h3>
+
+<a href="https://www.teepublic.com/user/sad-data-records/stickers" target="_blank" rel="noopener">Stickers</a>
+<a href="https://www.teepublic.com/user/sad-data-records/magnets" target="_blank" rel="noopener">Magnets</a>
+<a href="https://www.teepublic.com/user/sad-data-records/mug" target="_blank" rel="noopener">Mugs</a>
+<a href="https://www.teepublic.com/user/sad-data-records/throw-pillows" target="_blank" rel="noopener">Throw Pillows</a>
+
+</div>
+
+<div class="merch-box">
+
+<h3>CARRY IT</h3>
+
+<a href="https://www.teepublic.com/user/sad-data-records/totes" target="_blank" rel="noopener">Totes</a>
+<a href="https://www.teepublic.com/user/sad-data-records/bags" target="_blank" rel="noopener">Bags</a>
+
+</div>
+
+<div class="merch-box">
+
+<h3>WEAR IT</h3>
+
+<a href="https://www.teepublic.com/user/sad-data-records/pins" target="_blank" rel="noopener">Pins</a>
+<a href="https://www.teepublic.com/user/sad-data-records/hats" target="_blank" rel="noopener">Hats</a>
+<a href="https://www.teepublic.com/user/sad-data-records/baseball-t-shirt" target="_blank" rel="noopener">Baseball Tees</a>
+<a href="https://www.teepublic.com/user/sad-data-records/t-shirts" target="_blank" rel="noopener">T-Shirts</a>
+<a href="https://www.teepublic.com/user/sad-data-records/hoodie" target="_blank" rel="noopener">Hoodies</a>
+
+</div>
+
+<div class="merch-box">
+
+<h3>LIL' WEAR IT</h3>
+
+<a href="https://www.teepublic.com/user/sad-data-records/kids-t-shirt" target="_blank" rel="noopener">Kids Tees</a>
+<a href="https://www.teepublic.com/user/sad-data-records/kids-hoodies" target="_blank" rel="noopener">Kids Hoodies</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 SAD DATA RECORDS
+
+</footer>
+
+</body>
+</html>
