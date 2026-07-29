@@ -231,6 +231,55 @@ section{
     border:1px solid #777;
 }
 
+
+/* MUSIC VIDEOS */
+
+.videos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+    gap:40px;
+}
+
+.video-card{
+    background:#1b1b1b;
+    border:1px solid #333;
+    padding:20px;
+}
+
+.video-card h3{
+    margin-bottom:8px;
+}
+
+.video-card p{
+    color:#bbb;
+    margin-bottom:18px;
+}
+
+.video{
+    position:relative;
+    width:100%;
+    padding-bottom:56.25%;
+    height:0;
+    overflow:hidden;
+}
+
+.video iframe{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+@media(max-width:900px){
+
+.videos{
+    grid-template-columns:1fr;
+}
+
+}
+
+    
 /* MERCH */
 
 .merch{
@@ -540,6 +589,60 @@ Buy Vinyl
 
 </div>
 
+
+<section id="videos">
+
+<h2 class="section-title">OFFICIAL MUSIC VIDEOS</h2>
+
+<div class="videos">
+
+<div class="video-card">
+
+<h3>Night</h3>
+
+<p>
+<a href="vigorously.html">VIGOROUSLY</a> • <em>Emotional Volatility</em>
+</p>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/zfojXrBXwJ0"
+title="Night"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
+<div class="video-card">
+
+<h3>See You</h3>
+
+<p>
+<a href="vigorously.html">VIGOROUSLY</a> • <em>Deficit of Inhibition</em>
+</p>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/YaWsklX0aL4"
+title="See You"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+    
+    
 </section>
 
 <section id="merch">
